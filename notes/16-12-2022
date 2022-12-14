@@ -1,0 +1,5 @@
+### Socket.IO
+
+Think of a chat application, such as WhatsApp, Discord or maybe Slack. Simplify it to just the part where you are sending messages between you and someone else. With everything you have learned for the last couple of weeks, would you be able to create such a service yourself?
+
+You would probably be able to set up the message system in the backend, including a database, an endpoint to receive the necessary post requests,
