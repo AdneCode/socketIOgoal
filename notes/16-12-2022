@@ -13,3 +13,30 @@ You would probably be able to set up the message system in the backend, includin
 ### => solutions: [refresh/button, timer, socket io]
 
 ### socket io === sending one request
+
+# Client
+
+# npm install socket.io-client
+
+# socket/index.js
+
+````import {createContext} from 'react';
+import io from 'socket.io-client';
+
+export const socket = io("http://localhost:4000", {
+transports: ['websocket'],
+});
+export const SocketContext = createContext(socket)```
+````
+
+# root/index.js
+````import { socket, SocketContext } from './socket';````
+````    <BrowserRouter>
+        <SocketContext.Provider value={socket}>
+            <App />,
+        </SocketContext.Provider>
+    </BrowserRouter>,````
+
+# Server
+
+#npm install socket.io
