@@ -6,6 +6,10 @@ You would probably be able to set up the message system in the backend, includin
 
 # INTRO
 
-### Chat Application (discord, whatsapp, slack), big 3 Codaisseur
+### Chat Application [discord, whatsapp, slack], big 3 Codaisseur
 
 ### => problem: client needs to send get request
+
+### => solutions: [refresh/button, timer, socket io]
+
+### socket io === sending one request
