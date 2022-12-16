@@ -30,8 +30,10 @@ export const SocketContext = createContext(socket)```
 ````
 
 # root/index.js
-````import { socket, SocketContext } from './socket';````
-````    <BrowserRouter>
+
+`import { socket, SocketContext } from './socket';`
+
+`````<BrowserRouter>
         <SocketContext.Provider value={socket}>
             <App />,
         </SocketContext.Provider>
@@ -40,3 +42,17 @@ export const SocketContext = createContext(socket)```
 # Server
 
 #npm install socket.io
+
+//socket part
+````const http = require('http');
+const server = http.createServer(app);
+const { Server } = require('socket.io');
+const io = new Server(server);````
+
+!!!
+````server.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`);
+});````
+`````
+
+`io.on('connect', (socket) => {})`
